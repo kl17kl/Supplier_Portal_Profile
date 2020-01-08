@@ -1,0 +1,261 @@
+<!-- @index.html is the main page of the prototype - Company, Co. CAD
+@date created 12/12/2019
+@author Katie Lee -->
+
+<html>
+    <head>
+        <title>Supplier Portal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="top" class="navbar">
+            <a href="http://rbcnet.fg.rbc.com/"><img src="img/rbc_logo.png" alt="RBC logo" style="margin-top: -20px; width: 35px;"/></a>
+            <a class="active">LINK1</a>
+            <a class="nav_item">LINK2</a>
+            <a class="nav_item" style="float: right">SIGN-OUT</a>
+            <a style="float: right; cursor: context-menu">Last updated <strong>2 days ago</strong></a>
+        </div>
+        <div class="divider"></div>
+        <div class="navbar">
+            <a class="nav_item" style="padding-right: 2px">LINK</a>
+            <a style="cursor: context-menu">></a>
+            <a class="active" style="padding-left: 2px">SUPPLIER PROFILE</a>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 style="color: black; font-size: 250%">Company, Co.</h1>
+                <div style="width: 335px; overflow: hidden;">
+                    <div onclick="readMore('location')" style="width: 80px; float: left; cursor: pointer">
+                        <img src="img/cad_flag.jpg" alt="flag" style="width: 15px; padding-left: 5px"/>
+                        <a style="font-size: 90%; color: rgb(138, 138, 138); padding: 0 4px 0 4px;">CAD</a>
+                        <a class="arrow"></a>
+                    </div>
+                    <div id="location" style="display: none; float: left; margin-left: 5px;">
+                        <a href="index%us-nyc.html" class="location">US - NYC</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="dashboard.html"><button class="button btn_filled">DASHBOARD</button></a>
+                    <button class="button btn_border" onclick="document.getElementById('modal').style.display='block'" style="margin-left: 10px">MEETING REQUEST</button>
+                </div>
+                <!-- The Meeting Request modal -->
+                <div id="modal" class="modal">
+                    <form class="modal_content animate">
+                        <div class="header_container">
+                            <span onclick="document.getElementById('modal').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <p>Meeting Request</p>
+                        </div>
+                        <div class="modal_container">
+                            <label for="title"><b>Title</b></label>
+                            <input type="text" placeholder="Enter Title" name="title" required>
+                            <label for="msg"><b>Message</b></label>
+                            <input type="text" placeholder="Enter Message" name="msg" required>
+                            <button class="modal_submit" type="submit">Send Meeting Request</button>
+                        </div>
+                        <div class="modal_container" style="background-color:#f1f1f1"></div>
+                    </form>
+                </div>
+                <div class="divider"></div>
+                <p class="spacing">CONTRACTOR HEADCOUNT</p>
+                <h1 class="black">1,001</h1>
+                <p class="spacing black"><strong>SUMMARY</strong></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div id="summary" style="display: none; margin-top: -28px; height: 100px;">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div onclick="readMore('summary')">
+                    <p class="spacing blue" style="padding-bottom: 10px; cursor: pointer"><strong>Read More</strong></p>
+                </div>
+                <div class="divider"></div>
+                <p class="spacing black"><strong>EXTERNAL LINKS</strong></p>
+                <a href="https://prod.beeline.com/rbc/Security/NewLogin.aspx?Url=%2frbc%2fdefault.aspx" target="_blank" style="text-decoration: none;"><p class="blue">Go to Beeline</p></a>
+                <a href="https://www.sterlingbackcheck.ca/" target="_blank" style="text-decoration: none;"><p class="blue">Go to Sterling</p></a>
+            </div>
+            <div class="col" style="margin-left: 80px; width: 63%">
+                <div class="inavbar">
+                    <a id="ovr" class="inav_item" style="font-weight: bold; color: #51B5E0; border-bottom: 2px solid #51B5E0; padding-left: 0;" onclick="display('overview', 'ovr')">Overview</a>
+                    <a id="inf" class="inav_item" onclick="display('infractions', 'inf')">Infractions</a>
+                    <a id="agr" class="inav_item" onclick="display('agreements', 'agr')">Agreements</a>
+                    <a id="his" class="inav_item" onclick="display('history', 'his')">History</a>
+                    <a id="not" class="inav_item" onclick="display('notes', 'not')">Notes</a>
+                </div>
+                <div class="divider" style="margin-top: -2px;"></div>
+                <!-- The sub navbar display : OVERVIEW -->
+                <div id="overview" class="sub_row">
+                    <div class="sub_col">
+                        <p class="detail_header">LABOUR CATEGORY</p>
+                        <p class="details">Information Technology (IT)</p>
+                        <p class="detail_header">SUPPLIER STATUS</p>
+                        <p class="details">Niche</p>
+                        <p class="detail_header">LOCATIONS</p>
+                        <p class="details">CAD, US - NYC</p>
+                        <p class="detail_header">DIVERSITY STATUS</p>
+                        <p class="details">CAMSC</p>
+                    </div>
+                    <div class="sub_col">
+                        <p class="detail_header">SECONDARY LABOUR CATEGORY</p>
+                        <p class="details">N/A</p>
+                        <p class="detail_header">NICHE AREA</p>
+                        <p class="details">SAP</p>
+                        <p class="detail_header">CWM STATUS</p>
+                        <p class="details">Active</p>
+                        <p class="detail_header">SEGMENTATION</p>
+                        <p class="details">Tier 4</p>
+                    </div>
+                </div>
+               <!-- The sub navbar display : INFRACTIONS -->
+                <div id="infractions" class="sub_row" style="display:none">
+                    <div class="infSlides">
+                        <div class="numbertext">1 / 2</div>
+                        <p class="detail_header">INFRACTION - 10/09/2019</p>
+                        <div class="inf_container">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="inf_container2">
+                            <div style="background-color: rgb(224, 224, 224); height: 13px; width: 100%; padding: 5px">
+                                <a>Action Plan</a>
+                                <img src="img/attachment_icon.png" style="width: 17px; float: right; padding-right: 15px"/>
+                                <p style="padding: 0 7px 0 7px">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infSlides">
+                        <div class="numbertext">2 / 2</div>
+                        <p class="detail_header">INFRACTION - 12/18/2019</p>
+                        <div class="inf_container">
+                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                        </div>
+                        <div class="inf_container2">
+                            <div style="background-color: rgb(224, 224, 224); height: 13px; width: 100%; padding: 5px">
+                                <a>Action Plan</a>
+                                <img src="img/attachment_icon.png" style="width: 17px; float: right; padding-right: 15px"/>
+                                <p style="padding: 0 7px 0 7px">Voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>                 
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <!-- The sub navbar display : AGREEMENTS -->
+                <div id="agreements" class="sub_row" style="display:none">
+                    <p class="detail_header">AGREEMENTS</p>
+                    <div class="attachment">
+                        <a style="cursor: pointer"><img src="img/pdf_icon.png" style="width: 13px; padding-right: 5px;"/></a>
+                        <a style="cursor: pointer">Company_Supplier_MSA.pdf</a>
+                    </div>
+                    <a class="uploaded" style="padding-top: 25px">Uploaded on 04/12/2017</a>
+                    <div class="attachment" style="margin-top: 15px">
+                        <a style="cursor: pointer"><img src="img/pdf_icon.png" style="width: 13px; padding-right: 5px;"/></a>
+                        <a style="cursor: pointer">Company_Transaction_Agreement.pdf</a>
+                    </div>
+                    <a class="uploaded">Uploaded on 05/15/2017</a>
+                </div>
+                <!-- The sub navbar display : HISTORY -->
+                <div id="history" class="sub_row" style="display:none">
+                    <div class="sub_col">
+                        <p class="detail_header">START DATE</p>
+                        <p class="details">04/02/2017</p>
+                        <p class="detail_header">CONTRACTOR STATUS</p>
+                        <p class="details">Active</p>
+                        <p class="detail_header">DASHBOARD SCORE</p>
+                        <p class="details">000</p>
+                    </div>
+                    <div class="sub_col">
+                        <p class="detail_header">END DATE</p>
+                        <p class="details">10/24/2020</p>
+                        <p class="detail_header">CONTRACTOR DETAILS</p>
+                        <p class="details">_details_</p>
+                        <p class="detail_header">BILL RATE</p>
+                        <p class="details">0 weekly</p>
+                    </div>
+                </div>
+                <!-- The sub navbar display : NOTES -->
+                <div id="notes" class="sub_row" style="display:none">
+                    <p class="detail_header">NOTES</p>
+                    <div class="notes">
+                        <img src="img/format_bar.png" style="width: 99.8%; margin: auto;"/>
+                    </div>
+                </div>
+                <!-- The contacts display -->
+                <div class="sub_row" style="height: 250px;">
+                    <div class="inavbar" style="margin: -20px 0 0 -12px">
+                        <a id="man" class="inav_item" style="font-weight: bold; margin-left: 10px; color: #51B5E0; border-bottom: 2px solid #51B5E0; padding-left: 0" onclick="display2('main', 'man')">Main & Secondary</a>
+                        <a id="aud" class="inav_item" onclick="display2('audit', 'aud')">Audit</a>
+                        <a id="sup" class="inav_item" onclick="display2('supplier', 'sup')">Supplier Call Attendees</a>
+                        <a id="oth" class="inav_item" onclick="display2('other', 'oth')">Other</a>
+                    </div>
+                    <div class="divider" style="margin: -2px 0 20px 0"></div>
+                    <div id="main" style="width: 100%">
+                        <div class="sub_col contact_col" style="width: 30%">
+                            <p class="detail_header">MAIN CONTACT</p>
+                            <p class="details">John Smith</p>
+                            <p class="detail_header">SECONDARY CONTACT</p>
+                            <p class="details">Mary Miller</p>
+                        </div>
+                        <div class="sub_col contact_col" style="width: 30%">
+                            <p class="detail_header">EMAIL ADDRESS 1</p>
+                            <p class="details">john.smith@email.com</p>
+                            <p class="detail_header">EMAIL ADDRESS 2</p>
+                            <p class="details">mary.miller@email.com</p>
+                        </div>
+                        <div class="sub_col contact_col" style="width: 30%">
+                            <p class="detail_header">PHONE NUMBER 1</p>
+                            <p class="details">905-905-9055</p>
+                            <p class="detail_header">PHONE NUMBER 2</p>
+                            <p class="details">905-905-9050</p>
+                        </div>
+                    </div>
+                    <div id="audit" style="display: none; width: 100%">
+                        <div class="sub_col contact_col" style="width: 30%">
+                            <p class="detail_header">AUDIT CONTACT</p>
+                            <p class="details">Kevin So</p>
+                        </div>
+                        <div class="sub_col contact_col" style="width: 30%">
+                            <p class="detail_header">EMAIL ADDRESS</p>
+                            <p class="details">kevin.so@email.com</p>
+                        </div>
+                        <div class="sub_col contact_col" style="width: 30%">
+                            <p class="detail_header">PHONE NUMBER</p>
+                            <p class="details">905-905-2222</p>
+                        </div>
+                    </div>
+                    <div id="supplier" style="display: none; width: 100%">
+                        <div class="sub_col contact_col" style="width: 30%">
+                            <p class="detail_header">SCA CONTACT</p>
+                            <p class="details">Amy Jones</p>
+                        </div>
+                        <div class="sub_col contact_col" style="width: 30%">
+                            <p class="detail_header">EMAIL ADDRESS</p>
+                            <p class="details">amy.jones@email.com</p>
+                        </div>
+                        <div class="sub_col contact_col" style="width: 30%">
+                            <p class="detail_header">PHONE NUMBER</p>
+                            <p class="details">905-905-3333</p>
+                        </div>
+                    </div>
+                    <div id="other" style="display: none; width: 100%">
+                        <div class="sub_col contact_col" style="width: 30%">
+                            <p class="detail_header">OTHER CONTACT</p>
+                            <p class="details">Other Guy</p>
+                        </div>
+                        <div class="sub_col contact_col" style="width: 30%">
+                            <p class="detail_header">EMAIL ADDRESS</p>
+                            <p class="details">other.guy@email.com</p>
+                        </div>
+                        <div class="sub_col contact_col" style="width: 30%">
+                            <p class="detail_header">PHONE NUMBER</p>
+                            <p class="details">905-905-4444</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>@created: December 11, 2019 || @author: Katie Lee</p>
+        </footer>
+    </body>
+    <script src="scripts.js"></script>
+</html>

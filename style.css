@@ -1,0 +1,325 @@
+/** Supplier Portal - style.css */
+
+body{
+    font-family: "Verdana";
+    font-size: 14px;
+    margin: 0 50px 0 50px;
+    color: rgb(109, 109, 109);
+    cursor: default;
+}
+
+/* The top navbar */
+.navbar, .inavbar {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 20px;
+    color: rgb(82, 82, 82);
+}
+.navbar a {
+    float: left;
+    padding: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.inavbar a {
+    float: left;
+    padding: 12px;
+    padding-bottom: 29px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.nav_item, .inav_item {
+    transition: color 0.3s;
+}
+.nav_item:hover {
+    color:#51B5E0;
+}
+.active {
+    font-weight: bold;
+}
+.inavbar a:hover {
+    border-bottom: 2px solid #51B5E0;
+}
+.inavbar a.active {
+    border-bottom: 2px solid #51B5E0;
+}
+
+/* The divider */
+.divider {
+    width: 100%;
+    height: 1.5px;
+    background-color: #d9d9d9;
+}
+
+/* The main containers */
+#main_container {
+    width: 100%;
+    max-height: 150%;
+    overflow: hidden;
+    padding: 10px;
+}
+.row {
+    width: 100%;
+    height: 150%;
+    overflow: hidden;
+    padding: 10px;
+}
+.col {
+    width: 29%;
+    height: 100%;
+    float: left;
+}
+.sub_row {
+    width: 90%;
+    height: 310px;
+    overflow: hidden;
+    padding: 15px 40px 20px 40px;
+    margin-top: 30px;
+    background-color: #F4F4F4;
+}
+.sub_col {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.contact_col {
+    margin-left: 10px;
+}
+
+/* The arrow icons */
+.arrow {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid #b6b6b6;
+}
+.prev, .next {
+    margin-left: -700px;
+    margin-top: 130px;
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 15px 10px;
+    color:rgb(167, 167, 167);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 47px;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgb(172, 172, 172);
+    color: white;
+}
+.numbertext {
+    color: rgb(165, 165, 165);
+    padding-top: 10px;
+    right: 96;
+    position: absolute;
+}
+
+/* The location options - when visible */
+#location, .location {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(138, 138, 138);
+}
+.location:hover {
+    color: #51B5E0;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.5s;
+}
+
+/* The buttons */
+.button {
+    border: 2px solid #51B5E0;
+    border-radius: 5px;
+    padding: 12px 22px;
+    margin: 20px 0 40px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+}
+.btn_filled {
+    background-color: #51B5E0;
+    color: white;
+}
+.btn_border {
+    background-color: transparent;
+    color: rgb(88, 88, 88);
+}
+.btn_filled:hover {
+    transform: scale(.98);
+}
+.btn_border:hover {
+    transform: scale(.98);
+    background-color: #51B5E0;
+    color: white;
+}
+
+/* The Meeting Request form */
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.modal_submit {
+    background-color: #51B5E0;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 105%;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.modal_submit:hover {
+    opacity: 0.8;
+}
+.header_container {
+    text-align: center;
+    margin-top: 28px;
+    color: #51B5E0;
+    font-size: 150%;
+    position: relative;
+}
+.modal_container {
+    padding: 16px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+.modal_content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    border-radius: 7px;
+    width: 50%;
+}
+.close {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    color: rgb(80, 80, 80);
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+.close:hover, .close:focus {
+    color: red;
+    cursor: pointer;
+}
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+/* Formatting of left column */
+.spacing {
+    padding-top: 20px;
+}
+.black {
+    color: black;
+}
+.blue {
+    color: #51B5E0;
+}
+
+/* Formatting of the right column */
+.details {
+    font-size: 90%;
+    line-height: 0.5;
+    padding-bottom: 35px;
+}
+.detail_header {
+    font-size: 90%;
+    font-weight: bold;
+}
+
+/* The Infractions containers */
+.inf_container, .inf_container2 {
+    overflow: hidden;
+    width: 630px;
+    height: 100px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    padding: 10px;
+}
+.inf_container2 {
+    width: 99%;
+    height: 120px;
+    background-color: white;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    margin-top: 10px;
+    font-size: 97%;
+}
+
+/* The Agreements attachments */
+.attachment {
+    width: 310px;
+    height: 20px;
+    border: 2px solid #d9d9d9;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 5px;
+    float: left;
+}
+.uploaded {
+    float: left;
+    padding: 35px 0 0 15px;
+    font-size: 86%;
+    color: #949494;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* The Notes container */
+.notes {
+    background-color: white;
+    width: 100%;
+    height: 80%;
+    margin: auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}
+
+/* The Supplier Dashboard */
+.dashboard {
+    width: 100%;
+    height: auto;
+    margin: 30px auto;
+}
+
+/* The Footer */
+.footer {
+    width: 100%;
+    height: 60px;
+    font-size: 80%;
+    text-align: center;
+}
